@@ -20,7 +20,7 @@ exports.VendaFinalModule = VendaFinalModule = __decorate([
         imports: [typeorm_1.TypeOrmModule.forFeature([venda_final_entity_1.VendaFinalEntity])],
         controllers: [venda_final_controller_1.VendaFinalController],
         providers: [venda_final_service_1.VendaFinalService],
-        exports: [venda_final_service_1.VendaFinalService]
+        exports: [venda_final_service_1.VendaFinalService],
     })
 ], VendaFinalModule);
 //# sourceMappingURL=venda-final.module.js.map

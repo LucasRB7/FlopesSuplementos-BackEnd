@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { VendaParcialService } from './venda-parcial.service';
 import { VendaParcialDto } from './dto/venda-parcial.dto';
 import { ApiTags } from '@nestjs/swagger';
@@ -8,7 +16,7 @@ import { ApiTags } from '@nestjs/swagger';
 export class VendaParcialController {
   constructor(private readonly vendaParcialService: VendaParcialService) {}
 
-  @Post("/cadastrar")
+  @Post('/cadastrar')
   create(@Body() vendaParcialDto: VendaParcialDto) {
     return this.vendaParcialService.create(vendaParcialDto);
   }

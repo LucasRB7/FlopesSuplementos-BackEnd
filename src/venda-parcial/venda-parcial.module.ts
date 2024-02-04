@@ -5,9 +5,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { VendaParcialEntity } from './entities/venda-parcial.entity';
 
 @Module({
-  imports:[TypeOrmModule.forFeature([VendaParcialEntity])],
+  imports: [TypeOrmModule.forFeature([VendaParcialEntity])],
   controllers: [VendaParcialController],
   providers: [VendaParcialService],
-  exports: [VendaParcialService]
+  exports: [VendaParcialService],
 })
 export class VendaParcialModule {}

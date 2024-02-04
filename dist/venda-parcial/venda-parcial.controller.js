@@ -36,7 +36,7 @@ let VendaParcialController = class VendaParcialController {
 };
 exports.VendaParcialController = VendaParcialController;
 __decorate([
-    (0, common_1.Post)("/cadastrar"),
+    (0, common_1.Post)('/cadastrar'),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [venda_parcial_dto_1.VendaParcialDto]),

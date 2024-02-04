@@ -27,13 +27,12 @@ let ProdutoService = class ProdutoService {
     async find() {
         return await this.produtoRepository.find({
             order: {
-                produto_id: 'ASC'
-            }
+                produto_id: 'ASC',
+            },
         });
     }
     async update(id, body) {
-        return await this.produtoRepository
-            .update(id, body);
+        return await this.produtoRepository.update(id, body);
     }
     async remove(id) {
         return await this.produtoRepository.delete(id);

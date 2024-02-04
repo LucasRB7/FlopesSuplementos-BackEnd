@@ -28,7 +28,8 @@ let CategoriasService = class CategoriasService {
         return await this.categoriaRepo.find();
     }
     async findOne(table) {
-        return await this.categoriaRepo.createQueryBuilder('cat')
+        return await this.categoriaRepo
+            .createQueryBuilder('cat')
             .select('cat.categoria_nome')
             .where('cat.categoria_nome = :table', { table })
             .getRawMany();

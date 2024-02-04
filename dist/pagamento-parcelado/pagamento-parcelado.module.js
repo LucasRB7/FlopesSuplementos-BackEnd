@@ -20,7 +20,7 @@ exports.PagamentoParceladoModule = PagamentoParceladoModule = __decorate([
         imports: [typeorm_1.TypeOrmModule.forFeature([pagamento_parcelado_entity_1.PagamentoParceladoEntity])],
         controllers: [pagamento_parcelado_controller_1.PagamentoParceladoController],
         providers: [pagamento_parcelado_service_1.PagamentoParceladoService],
-        exports: [pagamento_parcelado_service_1.PagamentoParceladoService]
+        exports: [pagamento_parcelado_service_1.PagamentoParceladoService],
     })
 ], PagamentoParceladoModule);
 //# sourceMappingURL=pagamento-parcelado.module.js.map

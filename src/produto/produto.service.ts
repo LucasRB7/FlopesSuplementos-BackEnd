@@ -6,29 +6,28 @@ import { ProdutoDto } from './dto/produto.dto';
 
 @Injectable()
 export class ProdutoService {
-    constructor(
-        @InjectRepository(ProdutoEntity)
-        private readonly produtoRepository:Repository<ProdutoEntity>
-    ){}
+  constructor(
+    @InjectRepository(ProdutoEntity)
+    private readonly produtoRepository: Repository<ProdutoEntity>,
+  ) {}
 
-    async save(body: ProdutoDto){
-        return await this.produtoRepository.save(body)
-    }
+  async save(body: ProdutoDto) {
+    return await this.produtoRepository.save(body);
+  }
 
-    async find(){
-        return await this.produtoRepository.find({
-            order:{
-                produto_id:'ASC'
-            }
-        });
-    }
+  async find() {
+    return await this.produtoRepository.find({
+      order: {
+        produto_id: 'ASC',
+      },
+    });
+  }
 
-    async update(id:number,body: ProdutoDto){
-        return await this.produtoRepository
-        .update(id, body)
-    }
+  async update(id: number, body: ProdutoDto) {
+    return await this.produtoRepository.update(id, body);
+  }
 
-    async remove(id:number){
-        return await this.produtoRepository.delete(id)
-    }
+  async remove(id: number) {
+    return await this.produtoRepository.delete(id);
+  }
 }

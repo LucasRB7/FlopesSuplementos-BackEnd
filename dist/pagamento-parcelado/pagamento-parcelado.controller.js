@@ -27,8 +27,8 @@ let PagamentoParceladoController = class PagamentoParceladoController {
     findAll() {
         return this.pagamentoParceladoService.findAll();
     }
-    update(id, pagamentoParceladoDto) {
-        return this.pagamentoParceladoService.update(+id, pagamentoParceladoDto);
+    update(id) {
+        return this.pagamentoParceladoService.update(+id);
     }
     remove(id) {
         return this.pagamentoParceladoService.remove(+id);
@@ -51,9 +51,8 @@ __decorate([
 __decorate([
     (0, common_1.Patch)(':id'),
     __param(0, (0, common_1.Param)('id')),
-    __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, pagamento_parcelado_dto_1.PagamentoParceladoDto]),
+    __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], PagamentoParceladoController.prototype, "update", null);
 __decorate([

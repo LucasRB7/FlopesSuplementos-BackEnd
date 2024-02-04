@@ -5,6 +5,6 @@ export declare class VendaFinalController {
     constructor(vendaFinalService: VendaFinalService);
     create(vendaFinalDto: VendaFinalDto): Promise<VendaFinalDto & import("./entities/venda-final.entity").VendaFinalEntity>;
     findAll(): Promise<import("./entities/venda-final.entity").VendaFinalEntity[]>;
-    update(id: string, vendaFinalDto: VendaFinalDto): string;
+    update(id: string): string;
     remove(id: string): string;
 }

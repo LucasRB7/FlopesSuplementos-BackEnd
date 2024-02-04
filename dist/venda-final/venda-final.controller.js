@@ -27,8 +27,8 @@ let VendaFinalController = class VendaFinalController {
     findAll() {
         return this.vendaFinalService.findAll();
     }
-    update(id, vendaFinalDto) {
-        return this.vendaFinalService.update(+id, vendaFinalDto);
+    update(id) {
+        return this.vendaFinalService.update(+id);
     }
     remove(id) {
         return this.vendaFinalService.remove(+id);
@@ -36,7 +36,7 @@ let VendaFinalController = class VendaFinalController {
 };
 exports.VendaFinalController = VendaFinalController;
 __decorate([
-    (0, common_1.Post)("/cadastrar"),
+    (0, common_1.Post)('/cadastrar'),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [venda_final_dto_1.VendaFinalDto]),
@@ -51,9 +51,8 @@ __decorate([
 __decorate([
     (0, common_1.Patch)('/update/:id'),
     __param(0, (0, common_1.Param)('id')),
-    __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, venda_final_dto_1.VendaFinalDto]),
+    __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], VendaFinalController.prototype, "update", null);
 __decorate([

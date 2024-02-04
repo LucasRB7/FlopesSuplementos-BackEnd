@@ -52,7 +52,7 @@ let PagamentoParceladoService = class PagamentoParceladoService {
     findAll() {
         return this.pagamentoParceladoRepo.find();
     }
-    update(id, pagamentoParceladoDto) {
+    update(id) {
         return `This action updates a #${id} pagamentoParcelado`;
     }
     remove(id) {

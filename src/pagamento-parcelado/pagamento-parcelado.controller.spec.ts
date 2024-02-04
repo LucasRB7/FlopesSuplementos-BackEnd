@@ -11,7 +11,9 @@ describe('PagamentoParceladoController', () => {
       providers: [PagamentoParceladoService],
     }).compile();
 
-    controller = module.get<PagamentoParceladoController>(PagamentoParceladoController);
+    controller = module.get<PagamentoParceladoController>(
+      PagamentoParceladoController,
+    );
   });
 
   it('should be defined', () => {

@@ -20,7 +20,7 @@ exports.ProdutoModule = ProdutoModule = __decorate([
         imports: [typeorm_1.TypeOrmModule.forFeature([produto_entity_1.ProdutoEntity])],
         providers: [produto_service_1.ProdutoService],
         controllers: [produto_controller_1.ProdutoController],
-        exports: [produto_service_1.ProdutoService]
+        exports: [produto_service_1.ProdutoService],
     })
 ], ProdutoModule);
 //# sourceMappingURL=produto.module.js.map

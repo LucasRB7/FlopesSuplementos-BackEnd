@@ -20,7 +20,7 @@ exports.ClienteModule = ClienteModule = __decorate([
         imports: [typeorm_1.TypeOrmModule.forFeature([cliente_entity_1.ClienteEntity])],
         controllers: [cliente_controller_1.ClienteController],
         providers: [cliente_service_1.ClienteService],
-        exports: [cliente_service_1.ClienteService]
+        exports: [cliente_service_1.ClienteService],
     })
 ], ClienteModule);
 //# sourceMappingURL=cliente.module.js.map

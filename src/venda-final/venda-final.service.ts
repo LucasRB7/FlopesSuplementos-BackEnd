@@ -8,21 +8,21 @@ import { Repository } from 'typeorm';
 export class VendaFinalService {
   constructor(
     @InjectRepository(VendaFinalEntity)
-    private readonly vendaFinalRepo: Repository<VendaFinalEntity>
-  ){}
+    private readonly vendaFinalRepo: Repository<VendaFinalEntity>,
+  ) {}
   create(vendaFinalDto: VendaFinalDto) {
-    return this.vendaFinalRepo.save(vendaFinalDto)
+    return this.vendaFinalRepo.save(vendaFinalDto);
   }
 
   findAll() {
-    return this.vendaFinalRepo.find()
+    return this.vendaFinalRepo.find();
   }
 
   findOne(id: number) {
     return `This action returns a #${id} vendaFinal`;
   }
 
-  update(id: number, vendaFinalDto: VendaFinalDto) {
+  update(id: number) {
     return `This action updates a #${id} vendaFinal`;
   }
 

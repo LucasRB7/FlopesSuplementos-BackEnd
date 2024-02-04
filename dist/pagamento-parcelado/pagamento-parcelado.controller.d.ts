@@ -5,6 +5,6 @@ export declare class PagamentoParceladoController {
     constructor(pagamentoParceladoService: PagamentoParceladoService);
     createPagamentos(pagamentoParceladoDto: PagamentoParceladoDto): Promise<void>;
     findAll(): Promise<import("./entities/pagamento-parcelado.entity").PagamentoParceladoEntity[]>;
-    update(id: string, pagamentoParceladoDto: PagamentoParceladoDto): string;
+    update(id: string): string;
     remove(id: string): string;
 }

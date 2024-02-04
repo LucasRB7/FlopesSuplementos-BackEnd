@@ -25,7 +25,11 @@ let ClienteService = class ClienteService {
         return await this.clienteRepository.save(this.clienteRepository.create(createClienteDto));
     }
     async find() {
-        return await this.clienteRepository.find();
+        return await this.clienteRepository.find({
+            order: {
+                id: 'ASC',
+            },
+        });
     }
     async update(id, data) {
         return await this.clienteRepository.update(id, data);

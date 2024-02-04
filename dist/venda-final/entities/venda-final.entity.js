@@ -35,19 +35,19 @@ __decorate([
     __metadata("design:type", String)
 ], VendaFinalEntity.prototype, "status", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: "float" }),
+    (0, typeorm_1.Column)({ type: 'float' }),
     __metadata("design:type", Number)
 ], VendaFinalEntity.prototype, "total", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: "float" }),
+    (0, typeorm_1.Column)({ type: 'float' }),
     __metadata("design:type", Number)
 ], VendaFinalEntity.prototype, "acrescimos", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: "float" }),
+    (0, typeorm_1.Column)({ type: 'float' }),
     __metadata("design:type", Number)
 ], VendaFinalEntity.prototype, "descontos", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: "float" }),
+    (0, typeorm_1.Column)({ type: 'float' }),
     __metadata("design:type", Number)
 ], VendaFinalEntity.prototype, "subtotal", void 0);
 __decorate([

@@ -9,11 +9,13 @@ import { Repository } from 'typeorm';
 export class CategoriasService {
   constructor(
     @InjectRepository(CategoriaEntity)
-    private readonly categoriaRepo:Repository<CategoriaEntity>
-  ){}
+    private readonly categoriaRepo: Repository<CategoriaEntity>,
+  ) {}
 
   async save(createCategoriaDto: CreateCategoriaDto) {
-    return await this.categoriaRepo.save(this.categoriaRepo.create(createCategoriaDto));
+    return await this.categoriaRepo.save(
+      this.categoriaRepo.create(createCategoriaDto),
+    );
   }
 
   async findAll() {
@@ -21,16 +23,15 @@ export class CategoriasService {
   }
 
   async findOne(table: string) {
-    return await this.categoriaRepo.createQueryBuilder('cat')
-    .select(
-      'cat.categoria_nome'
-      )
-    .where('cat.categoria_nome = :table',{table})
-    .getRawMany();
+    return await this.categoriaRepo
+      .createQueryBuilder('cat')
+      .select('cat.categoria_nome')
+      .where('cat.categoria_nome = :table', { table })
+      .getRawMany();
   }
 
   async update(id: number, updateCategoriaDto: UpdateCategoriaDto) {
-    return await this.categoriaRepo.update(id,updateCategoriaDto)
+    return await this.categoriaRepo.update(id, updateCategoriaDto);
   }
 
   async remove(id: number) {

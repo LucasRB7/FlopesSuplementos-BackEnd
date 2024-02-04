@@ -20,7 +20,7 @@ exports.VendaParcialModule = VendaParcialModule = __decorate([
         imports: [typeorm_1.TypeOrmModule.forFeature([venda_parcial_entity_1.VendaParcialEntity])],
         controllers: [venda_parcial_controller_1.VendaParcialController],
         providers: [venda_parcial_service_1.VendaParcialService],
-        exports: [venda_parcial_service_1.VendaParcialService]
+        exports: [venda_parcial_service_1.VendaParcialService],
     })
 ], VendaParcialModule);
 //# sourceMappingURL=venda-parcial.module.js.map

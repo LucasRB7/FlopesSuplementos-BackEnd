@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { PagamentoParceladoService } from './pagamento-parcelado.service';
 import { PagamentoParceladoDto } from './dto/pagamento-parcelado.dto';
 import { ApiTags } from '@nestjs/swagger';
@@ -6,7 +14,9 @@ import { ApiTags } from '@nestjs/swagger';
 @ApiTags('Pagamento-Parcelado')
 @Controller('pagamento-parcelado')
 export class PagamentoParceladoController {
-  constructor(private readonly pagamentoParceladoService: PagamentoParceladoService) {}
+  constructor(
+    private readonly pagamentoParceladoService: PagamentoParceladoService,
+  ) {}
 
   @Post('/cadastrar')
   createPagamentos(@Body() pagamentoParceladoDto: PagamentoParceladoDto) {
@@ -14,8 +24,8 @@ export class PagamentoParceladoController {
       pagamentoParceladoDto.id_venda_ref,
       pagamentoParceladoDto.valor,
       pagamentoParceladoDto.parcela,
-      pagamentoParceladoDto.vencimento
-    )
+      pagamentoParceladoDto.vencimento,
+    );
   }
 
   @Get()
@@ -29,8 +39,8 @@ export class PagamentoParceladoController {
   // }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() pagamentoParceladoDto: PagamentoParceladoDto) {
-    return this.pagamentoParceladoService.update(+id, pagamentoParceladoDto);
+  update(@Param('id') id: string) {
+    return this.pagamentoParceladoService.update(+id);
   }
 
   @Delete(':id')

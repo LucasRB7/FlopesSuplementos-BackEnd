@@ -1,3 +1,3 @@
 export class CreateCategoriaDto {
-    categoria_nome:string
+  categoria_nome: string;
 }

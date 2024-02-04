@@ -33,9 +33,15 @@ exports.AppModule = AppModule = __decorate([
                 database: process.env.DB_DATABASE,
                 username: process.env.DB_USER,
                 password: process.env.DB_PASS,
-                entities: [__dirname + '/**/*.entity{.js,.ts  }']
+                entities: [__dirname + '/**/*.entity{.js,.ts  }'],
             }),
-            cliente_module_1.ClienteModule, produto_module_1.ProdutoModule, categorias_module_1.CategoriasModule, users_module_1.UsersModule, venda_parcial_module_1.VendaParcialModule, venda_final_module_1.VendaFinalModule, pagamento_parcelado_module_1.PagamentoParceladoModule
+            cliente_module_1.ClienteModule,
+            produto_module_1.ProdutoModule,
+            categorias_module_1.CategoriasModule,
+            users_module_1.UsersModule,
+            venda_parcial_module_1.VendaParcialModule,
+            venda_final_module_1.VendaFinalModule,
+            pagamento_parcelado_module_1.PagamentoParceladoModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

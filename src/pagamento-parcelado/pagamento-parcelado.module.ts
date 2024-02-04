@@ -8,6 +8,6 @@ import { PagamentoParceladoEntity } from './entities/pagamento-parcelado.entity'
   imports: [TypeOrmModule.forFeature([PagamentoParceladoEntity])],
   controllers: [PagamentoParceladoController],
   providers: [PagamentoParceladoService],
-  exports: [PagamentoParceladoService]
+  exports: [PagamentoParceladoService],
 })
 export class PagamentoParceladoModule {}

@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { VendaFinalService } from './venda-final.service';
 import { VendaFinalDto } from './dto/venda-final.dto';
 import { ApiTags } from '@nestjs/swagger';
@@ -8,7 +16,7 @@ import { ApiTags } from '@nestjs/swagger';
 export class VendaFinalController {
   constructor(private readonly vendaFinalService: VendaFinalService) {}
 
-  @Post("/cadastrar")
+  @Post('/cadastrar')
   create(@Body() vendaFinalDto: VendaFinalDto) {
     return this.vendaFinalService.create(vendaFinalDto);
   }
@@ -24,8 +32,8 @@ export class VendaFinalController {
   // }
 
   @Patch('/update/:id')
-  update(@Param('id') id: string, @Body() vendaFinalDto: VendaFinalDto) {
-    return this.vendaFinalService.update(+id, vendaFinalDto);
+  update(@Param('id') id: string) {
+    return this.vendaFinalService.update(+id);
   }
 
   @Delete('delete/:id')

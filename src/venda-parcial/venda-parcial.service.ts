@@ -8,8 +8,8 @@ import { InjectRepository } from '@nestjs/typeorm';
 export class VendaParcialService {
   constructor(
     @InjectRepository(VendaParcialEntity)
-    private readonly vendaParcialRepo:Repository<VendaParcialEntity>
-  ){}
+    private readonly vendaParcialRepo: Repository<VendaParcialEntity>,
+  ) {}
 
   create(vendaParcialDto: VendaParcialDto) {
     return this.vendaParcialRepo.save(vendaParcialDto);
@@ -24,10 +24,10 @@ export class VendaParcialService {
   // }
 
   update(id: number, vendaParcialDto: VendaParcialDto) {
-    return this.vendaParcialRepo.update(id,vendaParcialDto)
+    return this.vendaParcialRepo.update(id, vendaParcialDto);
   }
 
   remove(id: number) {
-    return this.vendaParcialRepo.delete(id)
+    return this.vendaParcialRepo.delete(id);
   }
 }

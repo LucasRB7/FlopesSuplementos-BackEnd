@@ -8,6 +8,6 @@ import { VendaFinalEntity } from './entities/venda-final.entity';
   imports: [TypeOrmModule.forFeature([VendaFinalEntity])],
   controllers: [VendaFinalController],
   providers: [VendaFinalService],
-  exports: [VendaFinalService]
+  exports: [VendaFinalService],
 })
 export class VendaFinalModule {}

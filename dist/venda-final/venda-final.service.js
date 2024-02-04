@@ -30,7 +30,7 @@ let VendaFinalService = class VendaFinalService {
     findOne(id) {
         return `This action returns a #${id} vendaFinal`;
     }
-    update(id, vendaFinalDto) {
+    update(id) {
         return `This action updates a #${id} vendaFinal`;
     }
     remove(id) {

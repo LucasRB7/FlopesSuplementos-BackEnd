@@ -31,11 +31,11 @@ __decorate([
     __metadata("design:type", Number)
 ], ProdutoEntity.prototype, "quantidade", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: "float" }),
+    (0, typeorm_1.Column)({ type: 'float' }),
     __metadata("design:type", Number)
 ], ProdutoEntity.prototype, "preco_compra", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: "float" }),
+    (0, typeorm_1.Column)({ type: 'float' }),
     __metadata("design:type", Number)
 ], ProdutoEntity.prototype, "preco_venda", void 0);
 __decorate([

@@ -7,6 +7,6 @@ export declare class VendaFinalService {
     create(vendaFinalDto: VendaFinalDto): Promise<VendaFinalDto & VendaFinalEntity>;
     findAll(): Promise<VendaFinalEntity[]>;
     findOne(id: number): string;
-    update(id: number, vendaFinalDto: VendaFinalDto): string;
+    update(id: number): string;
     remove(id: number): string;
 }
